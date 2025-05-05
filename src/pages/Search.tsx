@@ -116,6 +116,14 @@ export const Search = () => {
             </div>
           </div>
 
+          {/* Advertisement */}
+          <div className="flex justify-center mb-8 overflow-hidden">
+            <div id="frame" style={{width:'728px', height:'auto'}}>
+              <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
+              <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
+            </div>
+          </div>
+
           {error ? (
             <div className="text-center py-12 bg-red-500/10 rounded-xl border border-red-500/20">
               <AlertCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
@@ -150,6 +158,14 @@ export const Search = () => {
                     mediaType={item.media_type as 'movie' | 'tv'}
                   />
                 ))}
+              </div>
+
+              {/* Advertisement */}
+              <div className="flex justify-center mt-8 overflow-hidden">
+                <div id="frame" style={{width:'728px', height:'auto'}}>
+                  <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
+                  <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
+                </div>
               </div>
             </>
           ) : null}
