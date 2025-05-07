@@ -7,6 +7,7 @@ import MovieCard from '../components/MovieCard';
 import { SEO } from '../components/SEO';
 import { cn } from '../utils/cn';
 import { createSEOProps } from '../utils/seo-helper';
+import { Advertisement } from '../components/Advertisement';
 
 interface FeaturedBannerProps {
   items: any[];
@@ -316,12 +317,7 @@ export const Home = () => {
           </div>
 
           {/* Advertisement */}
-          <div className="flex justify-center mb-8 sm:mb-12 md:mb-16 overflow-hidden">
-            <div id="frame" style={{width:'728px', height:'auto'}}>
-              <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
-              <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
-            </div>
-          </div>
+          <Advertisement className="mb-8 sm:mb-12 md:mb-16" />
 
           {/* Quick Navigation */}
           <section className="mb-16">
@@ -375,12 +371,7 @@ export const Home = () => {
             />
 
             {/* Advertisement */}
-            <div className="flex justify-center py-4 overflow-hidden">
-              <div id="frame" style={{width:'728px', height:'auto'}}>
-                <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
-                <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
-              </div>
-            </div>
+            <Advertisement className="py-4" />
 
             <Category
               title="Top Rated Movies"

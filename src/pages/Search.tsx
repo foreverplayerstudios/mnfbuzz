@@ -6,6 +6,7 @@ import { search } from '../services/tmdb';
 import MovieCard from '../components/MovieCard';
 import { SEO } from '../components/SEO';
 import { cn } from '../utils/cn';
+import { Advertisement } from '../components/Advertisement';
 
 type MediaType = 'all' | 'movie' | 'tv';
 
@@ -117,12 +118,7 @@ export const Search = () => {
           </div>
 
           {/* Advertisement */}
-          <div className="flex justify-center mb-8 overflow-hidden">
-            <div id="frame" style={{width:'728px', height:'auto'}}>
-              <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
-              <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
-            </div>
-          </div>
+          <Advertisement className="mb-8" />
 
           {error ? (
             <div className="text-center py-12 bg-red-500/10 rounded-xl border border-red-500/20">
@@ -161,12 +157,7 @@ export const Search = () => {
               </div>
 
               {/* Advertisement */}
-              <div className="flex justify-center mt-8 overflow-hidden">
-                <div id="frame" style={{width:'728px', height:'auto'}}>
-                  <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
-                  <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
-                </div>
-              </div>
+              <Advertisement className="mt-8" />
             </>
           ) : null}
         </div>

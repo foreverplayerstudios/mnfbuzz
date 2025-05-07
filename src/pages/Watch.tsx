@@ -13,6 +13,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
 import { GenreBadge } from '../components/GenreBadge';
 import { createSEOProps, formatMovieTitle } from '../utils/seo-helper';
+import { Advertisement } from '../components/Advertisement';
 
 export const Watch = () => {
   const { mediaType = 'movie', id } = useParams<{ mediaType: 'movie' | 'tv'; id: string }>();
@@ -235,12 +236,7 @@ export const Watch = () => {
                 </div>
 
                 {/* Advertisement */}
-                <div className="flex justify-center mb-8 overflow-hidden">
-                  <div id="frame" style={{width:'728px', height:'auto'}}>
-                    <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
-                    <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
-                  </div>
-                </div>
+                <Advertisement className="mb-8" />
 
                 {mediaType === 'tv' && details.seasons && (
                   <div className="mb-8">
@@ -330,12 +326,7 @@ export const Watch = () => {
                 )}
 
                 {/* Advertisement */}
-                <div className="flex justify-center my-8 overflow-hidden">
-                  <div id="frame" style={{width:'728px', height:'auto'}}>
-                    <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
-                    <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
-                  </div>
-                </div>
+                <Advertisement className="my-8" />
 
                 <div className="mb-12">
                   <Comments mediaType={mediaType!} mediaId={id!} />
@@ -357,12 +348,7 @@ export const Watch = () => {
                 )}
 
                 {/* Advertisement */}
-                <div className="flex justify-center mt-8 overflow-hidden">
-                  <div id="frame" style={{width:'728px', height:'auto'}}>
-                    <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
-                    <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
-                  </div>
-                </div>
+                <Advertisement className="mt-8" />
               </div>
             </div>
           </div>

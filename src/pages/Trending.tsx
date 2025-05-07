@@ -5,6 +5,7 @@ import { getTrending } from '../services/tmdb';
 import MovieCard from '../components/MovieCard';
 import { SEO } from '../components/SEO';
 import { cn } from '../utils/cn';
+import { Advertisement } from '../components/Advertisement';
 
 export const Trending = () => {
   const [activeTab, setActiveTab] = React.useState<'movie' | 'tv'>('movie');
@@ -78,12 +79,7 @@ export const Trending = () => {
         </div>
 
         {/* Advertisement */}
-        <div className="flex justify-center mb-8 overflow-hidden">
-          <div id="frame" style={{width:'728px', height:'auto'}}>
-            <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
-            <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
-          </div>
-        </div>
+        <Advertisement className="mb-8" />
 
         {isLoading ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
@@ -104,12 +100,7 @@ export const Trending = () => {
         )}
 
         {/* Advertisement */}
-        <div className="flex justify-center mt-8 overflow-hidden">
-          <div id="frame" style={{width:'728px', height:'auto'}}>
-            <iframe data-aa='2393201' src='//ad.a-ads.com/2393201?size=728x90' style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}></iframe>
-            <a style={{display: 'block', textAlign: 'right', fontSize: '12px'}} id="preview-link" href="https://aads.com/campaigns/new/?source_id=2393201&source_type=ad_unit&partner=2393201">Advertise here</a>
-          </div>
-        </div>
+        <Advertisement className="mt-8" />
       </main>
     </>
   );
